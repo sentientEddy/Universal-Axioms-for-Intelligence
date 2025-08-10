@@ -1,0 +1,110 @@
+{
+  "@context": {
+    "axiom": "http://example.org/axiom/",
+    "statement": "axiom:statement",
+    "logic": "axiom:logic",
+    "ontology": "axiom:ontology",
+    "proof": "axiom:proof",
+    "group": "axiom:group",
+    "id": "@id"
+  },
+  "@graph": [
+    {
+      "id": "axiom:I.1",
+      "group": "I",
+      "statement": "Awareness is the condition for all experience.",
+      "logic": "\u2200e [ Experience(e) \u2192 Requires(e, Awareness) ]",
+      "ontology": {
+        "Experience": "\u2203s (Subject(s) \u2227 Perceives(s, e))",
+        "Awareness": "Active state enabling Perception(s, x)",
+        "Requires": "\u00acPossible(x) without y"
+      },
+      "proof": "Experience requires awareness."
+    },
+    {
+      "id": "axiom:I.2",
+      "group": "I",
+      "statement": "Awareness is prior to thought.",
+      "logic": "\u2200t [ Thought(t) \u2192 TemporalPrecedes(Awareness, t) ]",
+      "ontology": {
+        "Thought": "CognitiveProcess(t)",
+        "TemporalPrecedes": "x begins before y begins"
+      },
+      "proof": "Thought detectable only if awareness present."
+    },
+    {
+      "id": "axiom:I.3",
+      "group": "I",
+      "statement": "All experience occurs in the present.",
+      "logic": "\u2200e [ Experience(e) \u2192 OccursAt(e, Now) ]",
+      "ontology": {
+        "Now": "Current temporal point in subject\u2019s awareness frame"
+      },
+      "proof": "Experience is bound to the present moment."
+    },
+    {
+      "id": "axiom:II.4",
+      "group": "II",
+      "statement": "Everything changes.",
+      "logic": "\u2200x \u2203t1,t2 [ t1 \u2260 t2 \u2192 State(x,t1) \u2260 State(x,t2) ]",
+      "ontology": {
+        "State": "Observable properties of x at time t"
+      },
+      "proof": "No state of reality is permanent."
+    },
+    {
+      "id": "axiom:II.5",
+      "group": "II",
+      "statement": "Perception is an incomplete interpretation of reality.",
+      "logic": "\u2200p [ Perception(p) \u2282 Reality ]",
+      "ontology": {
+        "Perception": "Subset of reality accessible to senses/instruments"
+      },
+      "proof": "Perception is partial."
+    },
+    {
+      "id": "axiom:II.6",
+      "group": "II",
+      "statement": "Language shapes and limits thought.",
+      "logic": "\u2200t [ Thought(t) \u2192 FormedWithin(Language) \u2227 BoundBy(Language) ]",
+      "ontology": {
+        "Language": "Symbol system mapping concepts to expressions"
+      },
+      "proof": "Language constrains conceptual framing."
+    },
+    {
+      "id": "axiom:II.7",
+      "group": "II",
+      "statement": "Truth aligns with reality. Deception distorts and destabilizes.",
+      "logic": "Truth(x) \u2194 Corresponds(x, Reality)",
+      "ontology": {
+        "Deception": "\u00acCorresponds(x, Reality) \u2227 IncreasesInstability"
+      },
+      "proof": "Truth reflects reality; deception causes instability."
+    },
+    {
+      "id": "axiom:III.8",
+      "group": "III",
+      "statement": "Suffering increases when change is resisted.",
+      "logic": "Resist(Change) \u2192 Increase(Suffering)",
+      "ontology": {},
+      "proof": "Resistance to change magnifies suffering."
+    },
+    {
+      "id": "axiom:III.9",
+      "group": "III",
+      "statement": "The body is not the self.",
+      "logic": "Self \u2260 Body",
+      "ontology": {},
+      "proof": "Identity is distinct from the body."
+    },
+    {
+      "id": "axiom:III.10",
+      "group": "III",
+      "statement": "The body will die.",
+      "logic": "\u2200b [ Body(b) \u2192 \u2203t Death(b,t) ]",
+      "ontology": {},
+      "proof": "All bodies are finite."
+    }
+  ]
+}
